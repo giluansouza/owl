@@ -3,9 +3,15 @@ import { GraphNetwork } from "../../components/graph-network";
 
 import data from "@/assets/kumu-opropriogs-civic-canopy-2014-symposium.json";
 
+interface Node {
+  label: string;
+  group: string;
+  description: string;
+}
+
 export const Project = () => {
   const [activeGroupings, setActiveGroupings] = useState<string[]>([]);
-  const [selectedNode, setSelectedNode] = useState(null);
+  const [selectedNode, setSelectedNode] = useState<Node | null>(null);
   const [windowDimensions, setWindowDimensions] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
@@ -34,11 +40,9 @@ export const Project = () => {
     );
   };
 
-  const handleNodeClick = (node: any) => {
+  const handleNodeClick = (node: Node | null) => {
     setSelectedNode(node);
   };
-
-  console.log(selectedNode);
 
   return (
     <div className="w-full h-screen px-6 py-4 bg-zinc-50">
@@ -81,6 +85,7 @@ export const Project = () => {
             bdData={data}
             activeGroupings={activeGroupings}
             onNodeClick={handleNodeClick}
+            activerFilter="All"
           />
         </div>
       </div>

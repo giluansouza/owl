@@ -5,10 +5,10 @@ const getColorByElementType = (type: string) => {
   switch (type) {
     case "Person":
       return "#acbfcb";
-    case "Collective Impact-ish Initiative":
-      return "#2CA02C";
-    case "Location":
+    case "Organization":
       return "#D62728";
+    case "Region":
+      return "#2CA02C";
     default:
       return "#a4a6a8";
   }
@@ -18,10 +18,10 @@ const getRadiusByElementType = (type: string) => {
   switch (type) {
     case "Person":
       return 16;
-    case "Collective Impact-ish Initiative":
-      return 5;
+    case "Region":
+      return 8;
     default:
-      return 5;
+      return 8;
   }
 };
 
@@ -31,12 +31,14 @@ export const GraphNetwork = ({
   height,
   activeGroupings,
   onNodeClick,
+  showNodes,
 }: {
   bdData: any;
   width: number;
   height: number;
   activeGroupings: string[];
   onNodeClick: (node: any) => void;
+  showNodes: string[];
 }) => {
   const svgRef = useRef();
   const [data, setData] = useState(bdData);
@@ -47,33 +49,25 @@ export const GraphNetwork = ({
 
     // Filtrar os nós com base nos agrupamentos ativos
     const filterNodes = () => {
-      if (activeGroupings.length === 0) {
-        // Se não houver agrupamentos ativos, mostrar apenas nós do tipo "Person"
-        return data.elements.filter(
-          (element) => element.attributes["element type"] === "Person"
+      if (showNodes.length > 0) {
+        return data.elements.filter((element) =>
+          showNodes.includes(element.attributes["element type"])
         );
       }
 
       // Caso contrário, mostrar todos os nós e filtrar os links com base nos agrupamentos
       return data.elements.filter((element) => {
-        if (element.attributes["element type"] === "Person") return true;
-        if (
-          activeGroupings.includes("projects") &&
-          element.attributes["element type"] ===
-            "Collective Impact-ish Initiative"
-        )
-          return true;
-        if (
-          activeGroupings.includes("location") &&
-          element.attributes["element type"] === "Location"
-        )
-          return true;
         if (
           activeGroupings.includes("organization") &&
           element.attributes["element type"] === "Organization"
         )
           return true;
-        return false;
+        if (
+          activeGroupings.includes("region") &&
+          element.attributes["element type"] === "Region"
+        )
+          return true;
+        return true;
       });
     };
 
@@ -90,22 +84,20 @@ export const GraphNetwork = ({
     const generateLinks = () => {
       const links = [];
 
-      console.log(activeGroupings);
-
-      if (activeGroupings.includes("projects")) {
+      if (activeGroupings.includes("organization")) {
         links.push(
           ...data.elements
             .filter(
               (element) =>
                 element.attributes["element type"] === "Person" &&
-                element.attributes["collective impact-ish initiative"]
+                element.attributes["organization"]
             )
             .flatMap((element) => {
               const initiatives = Array.isArray(
-                element.attributes["collective impact-ish initiative"]
+                element.attributes["organization"]
               )
-                ? element.attributes["collective impact-ish initiative"]
-                : [element.attributes["collective impact-ish initiative"]];
+                ? element.attributes["organization"]
+                : [element.attributes["organization"]];
 
               return initiatives
                 .map((initiative) => ({
@@ -121,50 +113,23 @@ export const GraphNetwork = ({
       }
 
       // Adicione lógica para outras opções de agrupamento, como Localização e Organização
-      if (activeGroupings.includes("location")) {
+      if (activeGroupings.includes("region")) {
         links.push(
           ...data.elements
             .filter(
               (element) => element.attributes["element type"] === "Person"
             )
             .flatMap((element) => {
-              const locations = Array.isArray(
-                element.attributes["geographic focus"]
-              )
-                ? element.attributes["geographic focus"]
-                : [element.attributes["geographic focus"]];
+              const regions = Array.isArray(element.attributes["region"])
+                ? element.attributes["region"]
+                : [element.attributes["region"]];
 
-              return locations
-                .map((location) => ({
+              return regions
+                .map((region) => ({
                   source: element._id,
                   target: data.elements.find(
-                    (e) => e.attributes.label === location
+                    (e) => e.attributes.label === region
                   )?._id,
-                  value: 1,
-                }))
-                .filter((link) => link.source && link.target); // Filtra links inválidos
-            })
-        );
-      }
-
-      if (activeGroupings.includes("organization")) {
-        links.push(
-          ...data.elements
-            .filter(
-              (element) => element.attributes["element type"] === "Person"
-            )
-            .flatMap((element) => {
-              const organizations = Array.isArray(
-                element.attributes.organization
-              )
-                ? element.attributes.organization
-                : [element.attributes.organization];
-
-              return organizations
-                .map((org) => ({
-                  source: element._id,
-                  target: data.elements.find((e) => e.attributes.label === org)
-                    ?._id,
                   value: 1,
                 }))
                 .filter((link) => link.source && link.target); // Filtra links inválidos
@@ -176,7 +141,6 @@ export const GraphNetwork = ({
     };
 
     const links = activeGroupings.length > 0 ? generateLinks() : [];
-    console.log("links: ", links);
 
     const svg = d3
       .select(svgRef.current)
@@ -250,6 +214,20 @@ export const GraphNetwork = ({
       .attr("stroke", "#e6e6e6")
       .attr("fill", (d) => getColorByElementType(d.group));
 
+    node
+      .filter(
+        (d) => d.image && typeof d.image === "string" && d.image.trim() !== ""
+      )
+      .append("image")
+      .attr("xlink:href", (d) => d.image)
+      .attr("x", -16) // Centraliza a imagem no círculo
+      .attr("y", -16) // Centraliza a imagem no círculo
+      .attr("width", 36) // Tamanho da imagem
+      .attr("height", 36) // Tamanho da imagem
+      .on("error", function () {
+        d3.select(this).remove(); // Remove a imagem se ocorrer um erro ao carregar
+      });
+
     // Adiciona o rótulo abaixo do nó
     node
       .append("text")
@@ -290,7 +268,7 @@ export const GraphNetwork = ({
     }
 
     return () => simulation.stop();
-  }, [data, width, height, activeGroupings]);
+  }, [data, width, height, activeGroupings, showNodes]);
 
   return <svg ref={svgRef}></svg>;
 };

@@ -1,0 +1,741 @@
+{
+  "version": 1,
+  "name": "Alvos e Facções - 76ª CIPM",
+  "description": "Panorama atual de alvos e facções na área da 76ª CIPM.",
+  "proxyImages": true,
+  "defaultMap": "map-wBHr2wmE",
+  "defaultPerspective": "pers-zdcnfVBl",
+  "attributeRelevance": {},
+  "attributes": [
+    {
+      "_id": "attr-qPghIrQz",
+      "name": "Collective Impact-ish Initiative",
+      "format": "string",
+      "private": false,
+      "limit": "none",
+      "category": "General",
+      "prompt": "list",
+      "locked": false,
+      "values": [
+        "Adams County Youth Initiative",
+        "Colorado9to25",
+        "LiveWell",
+        "Mile High Connects",
+        "Early Childhood Colorado Partnership",
+        "Essentials for Childhood",
+        "Lake County Youth Master Plan",
+        "Far Northeast Denver United",
+        "Health Alliances",
+        "Pueblo Triple Aim",
+        "Bank On Denver",
+        "Make Today Count",
+        "LoDo Cares",
+        "Compassion Denver",
+        "Partnership for Age-Friendly Communities",
+        "Senior Transportation Coalition",
+        "Full Pantries",
+        "Full Lives Leadership Institute",
+        "One Community Pueblo Coalition",
+        "Edgewater Collective",
+        "Family Leadership Training Institute",
+        "Hive Denver",
+        "Urban Community Teaching Education Program",
+        "Colorado Fathers & Families Practitioners' Network",
+        "Ginger White",
+        "Arts & Venues Denver",
+        "Community Living Advisory Group",
+        "Rocky Mountain PBS",
+        "Urban Waters Partnership",
+        "IMAGINE 2020",
+        "Denver Afterschool Alliance",
+        "CSMlearn Community Uplift",
+        "Be Ready Campaign",
+        "Create Denver",
+        "R.A.C.E.",
+        "Alliance for Sustainable Colorado",
+        "Full Pantries Full Lives Leadership Institute",
+        "Mobilize Mile High",
+        "La Plata County SMART Collaborative"
+      ],
+      "sort": false,
+      "cluster": true
+    },
+    {
+      "_id": "attr-9LyzNh6n",
+      "name": "Collective Impact-ish Initiative (If your initiative was not listed above…)",
+      "format": "text",
+      "private": false,
+      "limit": 1,
+      "category": "General",
+      "prompt": "none",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": false
+    },
+    {
+      "_id": "attr-8Lz3eFce",
+      "name": "Connection Type",
+      "format": "string",
+      "private": false,
+      "limit": 1,
+      "category": "General",
+      "prompt": "list",
+      "locked": false,
+      "values": [
+        "Speed Networking",
+        "Collective Impact-ish Initiative"
+      ],
+      "sort": false,
+      "cluster": false
+    },
+    {
+      "_id": "attr-z8cO73Gr",
+      "name": "Description",
+      "format": "text",
+      "private": false,
+      "limit": 1,
+      "category": "General",
+      "prompt": "none",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": false
+    },
+    {
+      "_id": "attr-RVZZTdZ5",
+      "name": "Element Type",
+      "format": "string",
+      "private": false,
+      "limit": 1,
+      "category": "General",
+      "prompt": "list",
+      "locked": false,
+      "values": [
+        "Person",
+        "Wants to learn more about:",
+        "Has some experience or expertise with:",
+        "Collective Impact-ish Initiative"
+      ],
+      "sort": false,
+      "cluster": false
+    },
+    {
+      "_id": "attr-3PGsvD1C",
+      "name": "Geographic Focus",
+      "format": "string",
+      "private": false,
+      "limit": "none",
+      "category": "General",
+      "prompt": "autocomplete",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": true
+    },
+    {
+      "_id": "attr-k30jtpWt",
+      "name": "Has some experience or expertise with:",
+      "format": "string",
+      "private": false,
+      "limit": "none",
+      "category": "General",
+      "prompt": "list",
+      "locked": false,
+      "values": [
+        "Collaborative Process",
+        "Community Engagement",
+        "Evaluation",
+        "Continuous Improvement Strategies",
+        "Pooling Funds and Resources",
+        "Backbone / Infrastructure Support",
+        "Governance",
+        "Dialogue",
+        "Results and indicators",
+        "Communications",
+        "Technology"
+      ],
+      "sort": false,
+      "cluster": false
+    },
+    {
+      "_id": "attr-0oU3bAru",
+      "name": "Image",
+      "format": "image",
+      "private": true,
+      "limit": 1,
+      "category": "General",
+      "prompt": "none",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": false
+    },
+    {
+      "_id": "attr-3PuwXyfo",
+      "name": "Issue Area/Outcome Focus",
+      "format": "string",
+      "private": false,
+      "limit": "none",
+      "category": "General",
+      "prompt": "autocomplete",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": false
+    },
+    {
+      "_id": "attr-kCP2qsTD",
+      "name": "Label",
+      "format": "string",
+      "private": false,
+      "limit": 1,
+      "category": "General",
+      "prompt": "autocomplete",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": false
+    },
+    {
+      "_id": "attr-HUqbdScM",
+      "name": "Loop Type",
+      "format": "string",
+      "private": false,
+      "limit": 1,
+      "category": "General",
+      "prompt": "list",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": false
+    },
+    {
+      "_id": "attr-C8kBZNNw",
+      "name": "Organization",
+      "format": "string",
+      "private": false,
+      "limit": "none",
+      "category": "General",
+      "prompt": "autocomplete",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": true
+    },
+    {
+      "_id": "attr-xrwHLmAc",
+      "name": "Sector",
+      "format": "string",
+      "private": false,
+      "limit": 1,
+      "category": "General",
+      "prompt": "autocomplete",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": false
+    },
+    {
+      "_id": "attr-Cc2D8lrc",
+      "name": "Tags",
+      "format": "string",
+      "private": false,
+      "limit": "none",
+      "category": "General",
+      "prompt": "autocomplete",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": false
+    },
+    {
+      "_id": "attr-6YhSIjth",
+      "name": "Wants to learn more about:",
+      "format": "string",
+      "private": false,
+      "limit": "none",
+      "category": "General",
+      "prompt": "list",
+      "locked": false,
+      "values": [
+        "Evaluation",
+        "Pooling Funds and Resources",
+        "Backbone / Infrastructure Support",
+        "Technology",
+        "Results and indicators",
+        "Communications",
+        "Dialogue",
+        "Community Engagement",
+        "Governance",
+        "Continuous Improvement Strategies",
+        "Collaborative Process"
+      ],
+      "sort": false,
+      "cluster": false
+    },
+    {
+      "_id": "attr-HHtiM1ty",
+      "name": "betweenness",
+      "format": "number",
+      "private": false,
+      "limit": 1,
+      "category": "Metrics",
+      "prompt": "autocomplete",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": true
+    },
+    {
+      "_id": "attr-Q66KiFIU",
+      "name": "closeness",
+      "format": "number",
+      "private": false,
+      "limit": 1,
+      "category": "Metrics",
+      "prompt": "autocomplete",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": true
+    },
+    {
+      "_id": "attr-3upnTWxF",
+      "name": "eigenvector",
+      "format": "number",
+      "private": false,
+      "limit": 1,
+      "category": "Metrics",
+      "prompt": "autocomplete",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": true
+    },
+    {
+      "_id": "attr-PiGRLTe6",
+      "name": "indegree",
+      "format": "number",
+      "private": false,
+      "limit": 1,
+      "category": "Metrics",
+      "prompt": "autocomplete",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": true
+    },
+    {
+      "_id": "attr-q73vn11z",
+      "name": "metrics::last",
+      "format": "number",
+      "private": false,
+      "limit": 1,
+      "category": "Metrics",
+      "prompt": "autocomplete",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": true
+    },
+    {
+      "_id": "attr-qTxynrce",
+      "name": "micmac exposure",
+      "format": "number",
+      "private": false,
+      "limit": 1,
+      "category": "Metrics",
+      "prompt": "autocomplete",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": true
+    },
+    {
+      "_id": "attr-nDKGcaGZ",
+      "name": "micmac influence",
+      "format": "number",
+      "private": false,
+      "limit": 1,
+      "category": "Metrics",
+      "prompt": "autocomplete",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": true
+    },
+    {
+      "_id": "attr-NynQ1mVz",
+      "name": "outdegree",
+      "format": "number",
+      "private": false,
+      "limit": 1,
+      "category": "Metrics",
+      "prompt": "autocomplete",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": true
+    },
+    {
+      "_id": "attr-psKvd2jX",
+      "name": "reach",
+      "format": "number",
+      "private": false,
+      "limit": 1,
+      "category": "Metrics",
+      "prompt": "autocomplete",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": true
+    },
+    {
+      "_id": "attr-0a4SWeMb",
+      "name": "reach-efficiency",
+      "format": "number",
+      "private": false,
+      "limit": 1,
+      "category": "Metrics",
+      "prompt": "autocomplete",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": true
+    },
+    {
+      "_id": "attr-DUQmffCU",
+      "name": "size",
+      "format": "number",
+      "private": false,
+      "limit": 1,
+      "category": "Metrics",
+      "prompt": "autocomplete",
+      "locked": false,
+      "values": [],
+      "sort": false,
+      "cluster": true
+    }
+  ],
+  "elements": [
+    {
+      "_id": "elem-0I2YNxxJ",
+      "attributes": {
+        "label": "Cauã de Carvalho Medrado",
+        "organization": "Irmãos Metralha",
+        "description": "Atua no Piranga II, envolvido com homicídios e tráfico de drogas, sobrinho de Chiquinho do Piranga II.",
+        "region": [
+          "Piranga II"
+        ],
+        "image": "/caua-de-carvalho-medrado.png",
+        "element type": "Person",
+        "size": 1,
+        "tags": [
+          "Symposium"
+        ]
+      }
+    },
+    {
+      "_id": "elem-0v6sM7SY",
+      "attributes": {
+        "label": "Diogenes Alberto de Carvalho Medrado",
+        "organization": "Irmãos Metralha",
+        "description": "rmão de Cauã. Também atua no Piranga II no tráfico de drogas e homicídios.",
+        "sector": "K-12 education",
+        "image": "/diogenes-alberto-de-carvalho-medrado.png",
+        "element type": "Person",
+        "size": 2,
+        "region": [
+          "Piranga II"
+        ],
+        "tags": [
+          "Symposium"
+        ]
+      }
+    },
+    {
+      "_id": "elem-1754zVDn",
+      "attributes": {
+        "label": "Herbert Augusto de Carvalho Medrado",
+        "organization": "Irmãos Metralha",
+        "description": "Irmão de Cauã e Diogenes, atua no Piranga II no tráfico de drogas e homicídios.",
+        "element type": "Person",
+        "size": 2,
+        "region": [
+          "Piranga II"
+        ],
+        "tags": [
+          "Symposium"
+        ]
+      }
+    },
+    {
+      "_id": "elem-1BA8ClpA",
+      "attributes": {
+        "label": "Francisco Cícero dos Santos Júnior",
+        "exibitionName": "Júnior CDs",
+        "organization": "Honda",
+        "description": "Apontando como um dos cabeças do tráfico de drogas no bairro Piranga II, mas também atua no Residencial Mairi.",
+        "image": "/francisco-cicero-dos-santos-junior.png",
+        "element type": "Person",
+        "size": 1,
+        "region": [
+          "Piranga II",
+          "Residencial Mairi"
+        ],
+        "tags": [
+          "Symposium"
+        ]
+      }
+    },
+    {
+      "_id": "elem-1QR0Qb36",
+      "attributes": {
+        "label": "Wanderson Dantas da Conceição ",
+        "exibitionName": "Nino ou Coroa",
+        "organization": [],
+        "description": "Suspeito de vários homicídios na região, comparsa de Junior CD",
+        "sector": "Government",
+        "collective impact-ish initiative (if your initiative was not listed above…)": "Front Range Fuels Partnership\nWildfire Watershed Protection Partnership\nPikes Peak Wildfire Protection Partnership\nColorado Environmental Literacy Plan State Council\nColorado Association of the Education of Young Children\nAll of these groups are working to",
+        "geographic focus": "Statewide",
+        "image": "/wanderson-dantas-da-conceicao.png",
+        "element type": "Person",
+        "size": 1,
+        "partners": [
+          "Francisco Cícero dos Santos Júnior"
+        ],
+        "tags": [
+          "Symposium"
+        ]
+      }
+    },
+    {
+      "_id": "elem-1pxZpg6v",
+      "attributes": {
+        "label": "Anderson Ferreira dos Santos",
+        "exibitionName": "Anderson Gordinho",
+        "organization": "CV",
+        "description": "Está preso no Presídio de Petrolina de onde comanda as ações do seu sistema de tráfico de drogas. Atua Principalmente no Antônio Conselheiro, mas tem ligações com o Alto da Aliança. (Possui fortes ligações com Panda do Comando Vermelho)",
+        "image": "",
+        "element type": "Person",
+        "size": 2,
+        "region": [
+          "Antônio Conselheiro",
+          "Alto da Aliança"
+        ],
+        "tags": [
+          "Symposium"
+        ]
+      }
+    },
+    {
+      "_id": "elem-2Gvu4RzU",
+      "attributes": {
+        "label": "Alan Soares da Silva",
+        "exibitionName": "Alan Banguelo",
+        "image": "",
+        "element type": "Person",
+        "description": "em forte envolvimento com tráfico de drogas, já atuou no Alto da Aliança, onde numa ocasião se envolveu num homicídio e responde um inquérito por esse crime. Seu paradeiro é desconhecido, porém segundo informes sua última localização seria no Jardim das Acácias. Já andou se escondendo na área do Salitre também",
+        "sector": "Government",
+        "size": 2,
+        "organization": [
+          "BDM"
+        ],
+        "region": [
+          "Jardim das Acacias"
+        ],
+        "tags": [
+          "Symposium"
+        ]
+      }
+    },
+    {
+      "_id": "elem-05Ss2hTA",
+      "attributes": {
+        "label": "Piranga II",
+        "element type": "Region"
+      }
+    },
+    {
+      "_id": "elem-17ZyVilG",
+      "attributes": {
+        "label": "Residencial Mairi",
+        "element type": "Region"
+      }
+    },
+    {
+      "_id": "elem-1NxIwbTc",
+      "attributes": {
+        "label": "Res Juazeiro",
+        "element type": "Region"
+      }
+    },
+    {
+      "_id": "elem-3TaQaRWl",
+      "attributes": {
+        "label": "Res Dr Humberto",
+        "element type": "Region"
+      }
+    },
+    {
+      "_id": "elem-45Ksk545",
+      "attributes": {
+        "label": "Alto do Cruzeiro",
+        "element type": "Region"
+      }
+    },
+    {
+      "_id": "elem-1QxoreMl",
+      "attributes": {
+        "label": "Antônio Conselheiro",
+        "element type": "Region"
+      }
+    },
+    {
+      "_id": "elem-4S9gwDRx",
+      "attributes": {
+        "label": "Alto da Aliança",
+        "element type": "Region"
+      }
+    },
+    {
+      "_id": "elem-4tLgjBnI",
+      "attributes": {
+        "label": "Johny Santos da Silva",
+        "exibitionName": "Nego John",
+        "organization": [
+          "BDM"
+        ],
+        "description": "Comanda o tráfico no Antônio Conselheiro, está abaixo de Alan Banguelo. Mas de acordo com informes houve um racha com Alan Banguelo e agora são inimigos. (Pela ligação que possuía com Alan; que é BDM, teria essa ligação com a facção também)",
+        "image": "https://dl.dropboxusercontent.com/u/104966920/Symposium%20Kumu%20Pictures/Catherine%20Weldon.jpg",
+        "element type": "Person",
+        "size": 1,
+        "region": [
+          "Antônio Conselheiro"
+        ],
+        "tags": [
+          "Symposium"
+        ]
+      }
+    },
+    {
+      "_id": "elem-4vHhZVt2",
+      "attributes": {
+        "label": "Daniel Pereira Rodrigues",
+        "organization": [],
+        "description": "Comparsa de Nego John, atua no Antônio Conselheiro, Dr Humberto, Dom José Rodrigues e Pedro Raimundo, principalmente no tráfico de drogas. Recentemente foi preso com arma e drogas após informações do SOInt.",
+        "image": "daniel-pereira-rodrigues.jpg",
+        "element type": "Person",
+        "size": 2,
+        "region": [
+          "Antônio Conselheiro",
+          "Res Dr Humberto",
+          "Dom José Rodrigues",
+          "Pedro Raimundo"
+        ],
+        "tags": [
+          "Symposium"
+        ]
+      }
+    },
+    {
+      "_id": "elem-4wsTDI3c",
+      "attributes": {
+        "label": "Luana Silva Dias",
+        "organization": [],
+        "description": "Mulher de Daniel e comparsa dele no tráfico, responsável por receber o dinheiro proveniente do tráfico de drogas. Foi presa recentemente com informações do SOInt após ter um mandado de prisão expedido pela justiça.",
+        "image": "luana-silva-dias.jpg",
+        "element type": "Person",
+        "size": 1,
+        "partners": [
+          "Daniel Pereira Rodrigues"
+        ],
+        "region": [],
+        "tags": [
+          "Symposium"
+        ]
+      }
+    },
+    {
+      "_id": "elem-5DUZ2KkU",
+      "attributes": {
+        "label": "JAYANE DO NASCIMENTO SOUZA",
+        "organization": [
+          "CV"
+        ],
+        "description": "Envolvida com tráfico de drogas e mandante de homicídios. Segundo informes é responsável pela contratação e pagamento de executores. Atua no Alto da Aliança, Itaberaba, Alto do Cruzeiro, Residencial Juazeiro. (COMANDO VERMELHO). É prima de Alan Soares da Silva (Alan Banguelo), indivíduo apontado como chefe no tráfico de drogas em alguns bairros de Juazeiro.",
+        "image": "jayane-do-nascimento-souza.jpg",
+        "element type": "Person",
+        "size": 1,
+        "region": [
+          "Alto da Aliança",
+          "Itaberaba",
+          "Res Juazeiro",
+          "Alto do Cruzeiro"
+        ],
+        "tags": [
+          "Symposium"
+        ]
+      }
+    },
+    {
+      "_id": "elem-69A3cTDF",
+      "attributes": {
+        "label": "WESLEY SENA DOS SANTOS",
+        "exibitionName": "Nego do Polimento",
+        "organization": [
+          "Honda"
+        ],
+        "description": "Segundo informes assumiu o lugar de Manoel no grupo HONDA. Tem influenciado em CVLI na região do Alto da Aliança.",
+        "image": "https://dl.dropboxusercontent.com/u/104966920/Symposium%20Kumu%20Pictures/Erin%20Mooney.jpg",
+        "element type": "Person",
+        "size": 4,
+        "region": [
+          "Alto da Aliança"
+        ],
+        "tags": [
+          "Symposium"
+        ]
+      }
+    },
+    {
+      "_id": "elem-6moOqUhq",
+      "attributes": {
+        "label": "ALAN CARLOS RODRIGUES DA SILVA ",
+        "organization": [],
+        "description": "Atua no Alto da Aliança no tráfico de drogas e CVLI, recentemente foi preso em Petrolina pelo BIESP.",
+        "image": "alan-carlos-rodrigues-da-silva.jpg",
+        "element type": "Person",
+        "size": 2,
+        "region": [
+          "Alto da Aliça"
+        ],
+        "tags": [
+          "Symposium"
+        ]
+      }
+    },
+    {
+      "_id": "elem-6vQJCsjE",
+      "attributes": {
+        "label": "BDM",
+        "element type": "Organization"
+      }
+    },
+    {
+      "_id": "elem-6vQJCsaB",
+      "attributes": {
+        "label": "CV",
+        "element type": "Organization"
+      }
+    },
+    {
+      "_id": "elem-6vQJCscE",
+      "attributes": {
+        "label": "Honda",
+        "element type": "Organization"
+      }
+    }
+  ]
+}
